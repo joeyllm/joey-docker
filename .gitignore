@@ -1,0 +1,38 @@
+# Ignore Docker build files
+*.pid
+*.seed
+*.pid.lock
+
+# Ignore Docker Compose override files
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Ignore local env files
+.env
+.env.local
+.env.*.local
+
+# Ignore logs
+*.log
+logs/
+*.out
+
+# Ignore editor/OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Ignore build outputs
+/build/
+target/
+dist/
+__pycache__/
+*.pyc
+
+# Ignore credentials/secrets
+secrets.yml
+*.crt
+*.key
+*.pem
