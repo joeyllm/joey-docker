@@ -1,0 +1,31 @@
+hub:
+  config:
+    Authenticator:
+      admin_users:
+        - admin
+    DummyAuthenticator:
+      enabled: true
+
+    KubeSpawner:
+      uid: 1000
+      fs_gid: 100
+      allow_privilege_escalation: true
+      run_as_non_root: true
+
+singleuser:
+  image:
+    name: southerncrossai/docker
+    tag: latest
+  extraEnv:
+    SHELL: /bin/bash
+  cpu:
+    limit: 2
+    guarantee: 1
+  memory:
+    limit: 4G
+    guarantee: 2G
+  storage:
+    type: dynamic
+    dynamic:
+      storageClass: local-path
+    capacity: 5Gi
